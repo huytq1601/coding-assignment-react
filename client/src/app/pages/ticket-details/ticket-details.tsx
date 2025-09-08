@@ -60,7 +60,6 @@ export function TicketDetails() {
       }
     } catch (err) {
       console.error("Failed to assign ticket:", err);
-      throw err;
     }
   };
 
@@ -73,7 +72,7 @@ export function TicketDetails() {
   }
 
   if (!currentTicket) {
-    return <NotFoundState onBack={handleBack} message="No Ticket Found" />;
+    return <NotFoundState onBack={handleBack} message="No Ticket Found" onBackText="Back To Tickets" />;
   }
 
   return (
